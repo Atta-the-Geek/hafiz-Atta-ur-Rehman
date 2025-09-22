@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hafiz Atta — Cybersecurity Researcher & Portfolio</title>
+  <meta name="description" content="Portfolio of Hafiz Atta (Hafiz Atta ur Rehman) — cybersecurity researcher, projects, and contact." />
+  <meta name="author" content="Hafiz Atta" />
+
+  <!-- Simple inline styles so it's a single file -->
+  <style>
+    :root{--accent:#0b76ff;--muted:#666;--maxw:900px;font-family:Inter,system-ui,Arial,sans-serif}
+    body{margin:0;background:#f6f8fb;color:#111;display:flex;justify-content:center;padding:36px}
+    .wrap{max-width:var(--maxw);width:100%;background:#fff;border-radius:10px;box-shadow:0 6px 30px rgba(11,118,255,0.06);padding:28px}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,#0b76ff22,#7bd6ff22);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:28px}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    .row{display:grid;grid-template-columns:1fr 320px;gap:24px}
+    .card{background:#fbfdff;padding:16px;border-radius:10px;border:1px solid #eef4ff}
+    .projects{display:grid;gap:12px}
+    .proj{display:flex;gap:12px;align-items:center}
+    .proj img{width:120px;height:72px;object-fit:cover;border-radius:6px}
+    .proj h4{margin:0;font-size:16px}
+    .muted{color:var(--muted);font-size:13px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media(max-width:880px){.row{grid-template-columns:1fr} .avatar{width:68px;height:68px}}
+  </style>
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Hafiz Atta ur Rehman",
+    "alternateName":"Hafiz Atta",
+    "url":"https://hafizatta.com",
+    "jobTitle":"Cybersecurity Researcher",
+    "sameAs":[
+      "https://github.com/yourusername",
+      "https://www.linkedin.com/in/yourprofile"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="avatar">HA</div>
+      <div>
+        <h1>Hafiz Atta ur Rehman</h1>
+        <p class="lead">Cybersecurity researcher · ethical hacker · portfolio showcasing projects and experience.</p>
+        <a class="btn" href="#projects">View projects</a>
+      </div>
+    </header>
+
+    <div style="height:18px"></div>
+
+    <div class="row">
+      <!-- Left: content -->
+      <div>
+        <section id="about" class="card" style="margin-bottom:12px">
+          <h3>About</h3>
+          <p class="muted">Hello — I'm Hafiz Atta (also known as Hafiz Atta ur Rehman). I focus on vulnerability research, pentesting, and defensive engineering. Below are some selected projects demonstrating tooling, write-ups and code samples.</p>
+        </section>
+
+        <section id="projects" class="card">
+          <h3>Selected projects</h3>
+          <div class="projects" style="margin-top:12px">
+            <article class="proj">
+              <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1 screenshot">
+              <div>
+                <h4>Project 1 — Mobile App Security Audit</h4>
+                <p class="muted">Performed static & dynamic analysis; produced remediation report and PoC exploit. <a href="#" class="muted">Read more →</a></p>
+              </div>
+            </article>
+
+            <article class="proj">
+              <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2 screenshot">
+              <div>
+                <h4>Project 2 — Network Hardening Toolkit</h4>
+                <p class="muted">Toolkit for automated audits and baseline hardening for small networks. Includes scripts and documentation.</p>
+              </div>
+            </article>
+
+            <article class="proj">
+              <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3 screenshot">
+              <div>
+                <h4>Project 3 — CTF Write-ups</h4>
+                <p class="muted">Collection of CTF challenges solved, with step-by-step analysis and code.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:12px">
+          <h3>Contact</h3>
+          <p class="muted">Email: <strong>yourname@example.com</strong> (replace with your email) or find me on <a href="#" class="muted">GitHub</a> / <a href="#" class="muted">LinkedIn</a>.</p>
+        </section>
+      </div>
+
+      <!-- Right: sidebar -->
+      <aside>
+        <div class="card">
+          <h3>Quick info</h3>
+          <p class="muted"><strong>Full name:</strong> Hafiz Atta ur Rehman<br><strong>Also:</strong> Hafiz Atta<br><strong>Role:</strong> Cybersecurity Researcher</p>
+          <div style="height:12px"></div>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Resume</h3>
+          <p class="muted">Shortlist: pentesting · exploit dev · auditing · threat modelling. <br><a href="#" class="muted">Download CV</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <small>© <span id="year"></span> Hafiz Atta. Built for testing — replace content and images with your own. Save this file as <code>index.html</code> in your repo root.</small>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
