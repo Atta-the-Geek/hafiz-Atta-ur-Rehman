@@ -37,3 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, 120);
 });
+/* Remove hidden by default */
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--fade-duration) ease, transform var(--fade-duration) ease;
+}
