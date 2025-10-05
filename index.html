@@ -511,6 +511,41 @@
             .news-grid {
                 grid-template-columns: 1fr;
             }
+            /* Fix Profile Image */
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Reduce floating animation */
+.profile-frame {
+    animation: float 8s ease-in-out infinite; /* Slower animation */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); } /* Reduced movement */
+}
+
+/* Fix hand emoji position */
+.hand-emoji {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 2.5rem;
+    animation: wave 3s ease-in-out infinite; /* Slower wave */
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Reduce dashboard movement */
+.tech-dashboard {
+    transition: transform 0.3s ease; /* Smoother but less movement */
+}
         }
     </style>
 </head>
@@ -533,50 +568,51 @@
     <div class="particles" id="particles"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-left">
-            <div class="profile-container">
-                <div class="profile-frame">
-                    <div class="profile-pic">
-                       <img src="https://raw.githubusercontent.com/Atta-the-Geek/hafiz-Atta-ur-Rehman/main/image%20(1).png"
-                        <div class="hand-emoji">👋</div>
-                    </div>
+<section id="home" class="hero">
+    <div class="hero-left">
+        <div class="profile-container">
+            <div class="profile-frame">
+                <img src="https://raw.githubusercontent.com/Atta-the-Geek/hafiz-Atta-ur-Rehman/main/image%20(1).png" 
+                     alt="Hafiz Atta Ur Rehman" 
+                     class="profile-pic"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                <div class="hand-emoji">👋</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-right">
+        <div class="tech-dashboard">
+            <div class="welcome-text">
+                <h1></h1>
+                <p style="font-size: 1.5rem; margin-bottom: 1rem;">I'm <strong></strong></p>
+                <p></p>
+            </div>
+            <div class="dashboard-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">🔒</div>
+                    <h3>Cyber Security</h3>
+                    <p>Advanced Threat Protection</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⛓️</div>
+                    <h3>Blockchain</h3>
+                    <p>On-Chain Investigation</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">💻</div>
+                    <h3>IT Security</h3>
+                    <p>Infrastructure Protection</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔍</div>
+                    <h3>Digital Forensics</h3>
+                    <p>Incident Response</p>
                 </div>
             </div>
         </div>
-        
-        <div class="hero-right">
-            <div class="tech-dashboard">
-                <div class="welcome-text">
-                    <h1></h1>
-                    <p style="font-size: 1.5rem; margin-bottom: 1rem;"> <strong></strong></p>
-                    <p></p>
-                </div>
-                <div class="dashboard-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">🔒</div>
-                        <h3>Cyber Security</h3>
-                        <p>Advanced Threat Protection</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">⛓️</div>
-                        <h3>Blockchain</h3>
-                        <p>On-Chain Investigation</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">💻</div>
-                        <h3>IT Security</h3>
-                        <p>Infrastructure Protection</p>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon">🔍</div>
-                        <h3>Digital Forensics</h3>
-                        <p>Incident Response</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
